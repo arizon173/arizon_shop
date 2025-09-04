@@ -8,6 +8,7 @@ const searchButton = document.querySelector('.search-btn');
 const cartButton = document.getElementById('cartButton');
 const cartPanel = document.getElementById('cartPanel');
 const closeCart = document.getElementById('closeCart');
+const navLinks = document.querySelectorAll('.nav-link');
 
 // Функція для закриття меню
 function closeMenu() {
@@ -45,6 +46,17 @@ function openCartPanel() {
     overlay.classList.add('active');
 }
 
+// Функція для плавної прокрутки до секції
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop - 80,
+            behavior: 'smooth'
+        });
+    }
+}
+
 // Додавання обробників подій
 menuButton.addEventListener('click', () => {
     if (nav.classList.contains('active')) {
@@ -64,6 +76,22 @@ searchButton.addEventListener('click', openMobileSearch);
 closeSearch.addEventListener('click', closeMobileSearch);
 cartButton.addEventListener('click', openCartPanel);
 closeCart.addEventListener('click', closeCartPanel);
+
+// Обробка кліків по навігаційних посиланнях
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const section = link.getAttribute('data-section');
+        
+        // Закриваємо меню на мобільних пристроях
+        if (window.innerWidth < 900) {
+            closeMenu();
+        }
+        
+        // Прокручуємо до відповідної секції
+        scrollToSection(section);
+    });
+});
 
 // Додавання товарів до кошика
 class Cart {
