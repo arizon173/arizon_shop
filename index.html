@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoElite | Преміальні годинники</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fas fa-clock"></i>
+                <span>ChronoElite</span>
+            </a>
+            
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Пошук годинників..." class="search-input">
+            </div>
+            
+            <div class="header-controls">
+                <button class="icon-btn search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <button class="icon-btn cart-icon" id="cartButton">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge cart-count">0</span>
+                </button>
+                
+                <div class="menu-btn" id="menuButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Search -->
+    <div class="mobile-search" id="mobileSearch">
+        <input type="text" placeholder="Пошук годинників..." class="mobile-search-input">
+        <button class="mobile-search-btn">
+            <i class="fas fa-search"></i>
+        </button>
+        <button class="close-search" id="closeSearch">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <ul class="nav-links">
+            <li><a href="#" class="active"><i class="fas fa-home"></i> Головна</a></li>
+            <li><a href="#"><i class="fas fa-clock"></i> Каталог</a></li>
+            <li><a href="#"><i class="fas fa-heart"></i> Обране</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Профіль</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> Про нас</a></li>
+            <li><a href="#"><i class="fas fa-phone"></i> Контакти</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>Ваш кошик</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Загальна сума:</strong>
+                <span class="total-price">0 ₴</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Елегантність у кожній секунді</h1>
+            <p>Відкрийте для себе преміальні годинники, що поєднують традиційну майстерність з сучасним дизайном.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-white">До каталогу</button>
+                <button class="btn btn-outline-white">Детальніше</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-tags"></i> Категорії</h2>
+                <a href="#" class="view-all">Дивитись всі <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <h3>Чоловічі</h3>
+                    <p>Елегантні моделі для сучасних чоловіків</p>
+                    <a href="#" class="category-link">Переглянути <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Жіночі</h3>
+                    <p>Витончені годинники для стильних жінок</p>
+                    <a href="#" class="category-link">Переглянути <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Розумні</h3>
+                    <p>Сучасні технології для вашого зап'ястя</p>
+                    <a href="#" class="category-link">Переглянути <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Преміум</h3>
+                    <p>Ексклюзивні моделі з дорогоцінних матеріалів</p>
+                    <a href="#" class="category-link">Переглянути <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-fire"></i> Популярні моделі</h2>
+                <a href="#" class="view-all">Дивитись всі <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="filter-controls">
+                <button class="filter-btn active">Всі</button>
+                <button class="filter-btn">Чоловічі</button>
+                <button class="filter-btn">Жіночі</button>
+                <button class="filter-btn">Розумні</button>
+                <button class="filter-btn">Преміум</button>
+            </div>
+            
+            <div class="watches-grid">
+                <div class="watch-card">
+                    <div class="watch-image">
+                        <span class="product-badge new">Новинка</span>
+                    </div>
+                    <div class="watch-content">
+                        <h3>Chrono Classic</h3>
+                        <p class="watch-brand">ChronoElite</p>
+                        <div class="watch-price">
+                            <span class="old-price">15 499 ₴</span>
+                            12 499 ₴
+                        </div>
+                        <div class="watch-actions">
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
+                            <button class="btn btn-primary buy-button" data-id="1" data-name="Chrono Classic" data-price="12499">
+                                <i class="fas fa-shopping-cart"></i> Купити
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="watch-card">
+                    <div class="watch-image">
+                        <span class="product-badge sale">-15%</span>
+                    </div>
+                    <div class="watch-content">
+                        <h3>Elegance Silver</h3>
+                        <p class="watch-brand">ChronoElite</p>
+                        <div class="watch-price">
+                            <span class="old-price">18 799 ₴</span>
+                            15 999 ₴
+                        </div>
+                        <div class="watch-actions">
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
+                            <button class="btn btn-primary buy-button" data-id="2" data-name="Elegance Silver" data-price="15999">
+                                <i class="fas fa-shopping-cart"></i> Купити
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="watch-card">
+                    <div class="watch-image">
+                    </div>
+                    <div class="watch-content">
+                        <h3>Sport Grey</h3>
+                        <p class="watch-brand">ChronoElite</p>
+                        <div class="watch-price">
+                            9 799 ₴
+                        </div>
+                        <div class="watch-actions">
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
+                            <button class="btn btn-primary buy-button" data-id="3" data-name="Sport Grey" data-price="9799">
+                                <i class="fas fa-shopping-cart"></i> Купити
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="watch-card">
+                    <div class="watch-image">
+                        <span class="product-badge new">Новинка</span>
+                    </div>
+                    <div class="watch-content">
+                        <h3>Luxury Gold</h3>
+                        <p class="watch-brand">ChronoElite</p>
+                        <div class="watch-price">
+                            24 999 ₴
+                        </div>
+                        <div class="watch-actions">
+                            <button class="btn btn-icon"><i class="fas fa-heart"></i></button>
+                            <button class="btn btn-primary buy-button" data-id="4" data-name="Luxury Gold" data-price="24999">
+                                <i class="fas fa-shopping-cart"></i> Купити
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-outline">Показати ще</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
