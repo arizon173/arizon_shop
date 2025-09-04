@@ -54,12 +54,11 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <ul class="nav-links">
-            <li><a href="#" class="active"><i class="fas fa-home"></i> Головна</a></li>
-            <li><a href="#"><i class="fas fa-clock"></i> Каталог</a></li>
-            <li><a href="#"><i class="fas fa-heart"></i> Обране</a></li>
-            <li><a href="#"><i class="fas fa-user"></i> Профіль</a></li>
-            <li><a href="#"><i class="fas fa-info-circle"></i> Про нас</a></li>
-            <li><a href="#"><i class="fas fa-phone"></i> Контакти</a></li>
+            <li><a href="#" class="active nav-link" data-section="hero"><i class="fas fa-home"></i> Головна</a></li>
+            <li><a href="#" class="nav-link" data-section="categories"><i class="fas fa-clock"></i> Каталог</a></li>
+            <li><a href="#" class="nav-link" data-section="featured"><i class="fas fa-heart"></i> Обране</a></li>
+            <li><a href="#" class="nav-link" data-section="about"><i class="fas fa-user"></i> Про нас</a></li>
+            <li><a href="#" class="nav-link" data-section="contact"><i class="fas fa-phone"></i> Контакти</a></li>
         </ul>
     </nav>
 
@@ -87,7 +86,7 @@
     <div class="overlay" id="overlay"></div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container hero-content">
             <h1>Елегантність у кожній секунді</h1>
             <p>Відкрийте для себе преміальні годинники, що поєднують традиційну майстерність з сучасним дизайном.</p>
@@ -99,7 +98,7 @@
     </section>
 
     <!-- Categories Section -->
-    <section class="categories">
+    <section class="categories" id="categories">
         <div class="container">
             <div class="section-header">
                 <h2><i class="fas fa-tags"></i> Категорії</h2>
@@ -143,7 +142,7 @@
     </section>
 
     <!-- Featured Products -->
-    <section class="featured">
+    <section class="featured" id="featured">
         <div class="container">
             <div class="section-header">
                 <h2><i class="fas fa-fire"></i> Популярні моделі</h2>
@@ -242,6 +241,138 @@
             </div>
         </div>
     </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-info-circle"></i> Про нас</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>ChronoElite - ексклюзивні годинники для витончених особистостей</h3>
+                    <p>Ми - команда ентузіастів, яка об'єднала любов до точного механізму та сучасного дизайну. Наша місія - надати клієнтам доступ до найкращих годинників світу.</p>
+                    <p>З 2010 року ми постачаємо якісні годинники від провідних виробників, поєднуючи традиційну майстерність з інноваційними технологіями.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>13+</h4>
+                            <p>років на ринку</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5000+</h4>
+                            <p>задоволених клієнтів</p>
+                        </div>
+                        <div class="stat">
+                            <h4>20+</h4>
+                            <p>світових брендів</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-store"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-phone"></i> Контакти</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Наші контакти</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Адреса</h4>
+                            <p>м. Київ, вул. Примерна, 123</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+38 (099) 123-45-67</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@chronoelite.ua</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Години роботи</h4>
+                            <p>Пн-Пт: 10:00 - 20:00</p>
+                            <p>Сб-Нд: 11:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Напишіть нам</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Ваше повідомлення" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Відправити</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ChronoElite</h3>
+                    <p>Елегантність у кожній секунді</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Категорії</h4>
+                    <ul>
+                        <li><a href="#">Чоловічі годинники</a></li>
+                        <li><a href="#">Жіночі годинники</a></li>
+                        <li><a href="#">Розумні годинники</a></li>
+                        <li><a href="#">Преміум колекція</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Клієнтам</h4>
+                    <ul>
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="#">Доставка та оплата</a></li>
+                        <li><a href="#">Гарантія</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <p>+38 (099) 123-45-67</p>
+                    <p>info@chronoelite.ua</p>
+                    <p>м. Київ, вул. Примерна, 123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ChronoElite. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
